@@ -1,11 +1,10 @@
 {
-  "name": "bate-palmas",
-  "short_name": "Clap your hand",
-  "version":"1.0.0",
-  "start_url": "/index.html",
+  "name": "Bate Palmas",
+  "short_name": "Bate Palmas",
+  "description": "Um site que bate palmas para você",
+  "start_url": "/",
   "background_color": "#3367D6",
   "display": "standalone",
-  "scope": "/bate-palmas/",
+  "scope": "/",
   "theme_color": "#3367D6"
 }
-
