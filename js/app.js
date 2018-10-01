@@ -25,11 +25,12 @@ ready(onReady);
 
 function onReady() {
     document.getElementById("clap").src = claps[Math.floor(Math.random() * 9)];
-
-    myAudio = new Audio('./Audio/applause.mp3'); 
-    myAudio.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-    myAudio.play();
+    document.getElementById('start-clap-btn').addEventListener('click', () => {
+            myAudio = new Audio('./Audio/applause.mp3'); 
+            myAudio.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+            }, false);
+            myAudio.play();
+        });
 }
