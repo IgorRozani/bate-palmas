@@ -15,8 +15,6 @@ var searchTerm_claps = [
   'clap',
   'clap clap',
   'palmas',
-  'salva de palmas',
-  'palmas lentas',
   'batendo palmas'
 ];
 
@@ -76,7 +74,7 @@ function tenorCallback_search(responsetext) {
   if (gifs !== undefined) {
     ready(function() {
       document.getElementById('clap').src =
-        gifs[Math.floor(Math.random() * 49)]['media'][0]['gif']['url'];
+        gifs[0]['media'][0]['gif']['url'];
     });
   } else {
     tenorErrorCallback();
@@ -95,17 +93,17 @@ function tenorErrorCallback() {
 
 function getGifFromTenor() {
   var apikey = '18EXWLR6JJ7Z';
-  var lmt = 50;
+  var limit = 1;
 
-  var search_term = searchTerm_claps[Math.floor(Math.random() * 5)];
+  var search_term = searchTerm_claps[Math.floor(Math.random() * 3)];
 
   var search_url =
-    'https://api.tenor.com/v1/search?q=' +
+    'https://api.tenor.com/v1/random?q=' +
     search_term +
     '&key=' +
     apikey +
     '&limit=' +
-    lmt;
+    limit;
 
   httpGetAsync(search_url, tenorCallback_search, tenorErrorCallback);
 
