@@ -54,7 +54,6 @@ function httpGetAsync(theUrl, callback, errorCallback) {
   var xmlHttp = new XMLHttpRequest();
 
   xmlHttp.onreadystatechange = function() {
-    debugger;
 
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
       callback(xmlHttp.responseText);
