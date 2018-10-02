@@ -92,7 +92,7 @@ function tenorErrorCallback() {
 }
 
 function getGifFromTenor() {
-  var apikey = '18EXWLR6JJ7Z';
+  var apikey = 'IIQ7A73JNDWO';
   var limit = 1;
 
   var search_term = searchTerm_claps[Math.floor(Math.random() * 3)];
